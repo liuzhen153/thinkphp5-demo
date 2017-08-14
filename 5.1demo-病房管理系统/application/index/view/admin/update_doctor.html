@@ -1,0 +1,33 @@
+{include file="common/header" title="$title" /}
+
+          <form role="form" action="{:url('update_doctor_check')}" method="post">
+            <div class="form-group">
+              <label for="mm">工号：</label>
+              <select class="form-control" name="dno">
+                {volist name="doctor" id="vo"}
+                  <option value='{$vo.Dno}'>{$vo.Dno}.{$vo.Dname}.{$vo.lz_Aname}</option>
+                {/volist}
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mm">职称：</label>
+              <select class="form-control" name="dzc">
+                  <option value='科主任'>科主任</option>
+                  <option value='医生'>医生</option>
+                  <option value='护士长'>护士长</option>
+                  <option value='护士'>护士</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="mm">所属科室：</label>
+              <select class="form-control" name="keshi">
+                {volist name="ato" id="vo"}
+                  <option value='{$vo.Aname}'>{$vo.Aname}</option>
+                {/volist}
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">提交</button>
+          </form>
+
+  {include file="common/footer" /}

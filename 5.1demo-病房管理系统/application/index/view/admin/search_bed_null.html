@@ -1,0 +1,16 @@
+{include file="common/header" title="$title" /}
+<table class="table table-bordered">
+    <tr class="info">
+      <td>床位号</td>
+      <td>使用情况</td>
+      <td>所属科室</td>
+    </tr>
+    {volist name="bed" id="vo"}
+    <tr>
+      <td>{$vo.Cno}</td>
+      <td>{$vo.Cuse}</td>
+      <td>{$vo.bc_Aname}</td>
+    </tr>
+    {/volist}
+  </table>
+{include file="common/footer" /}

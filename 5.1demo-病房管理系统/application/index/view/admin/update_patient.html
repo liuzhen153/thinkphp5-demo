@@ -1,0 +1,17 @@
+{include file="common/header" title="$title" /}
+      <form role="form" action="{:url('update_patient_check')}" method="post">
+        <div class="form-group">
+          <label for="mm">住院号：</label>
+          <select class="form-control" name="pno">
+            {volist name="patient" id="vo"}
+              <option value='{$vo.Pno}'>{$vo.Pno}.{$vo.Pname}</option>
+            {/volist}
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="zh">医疗备注：</label>
+          <input type="text" name="mark" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">提交</button>
+      </form>
+  {include file="common/footer" /}

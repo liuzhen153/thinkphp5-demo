@@ -1,0 +1,15 @@
+{include file="common/header" title="$title" /}
+
+<form role="form" action="{:url('del_patient_check')}" method="post">
+  <div class="form-group">
+    <label for="mm">住院号：</label>
+    <select class="form-control" name="pno">
+      {volist name="patient" id="vo"}
+        <option value='{$vo.Pno}'>{$vo.Pno}.{$vo.Pname}</option>
+      {/volist}
+      </select>
+  </div>
+  <button type="submit" class="btn btn-danger btn-block">确认删除</button>
+</form>
+
+  {include file="common/footer" /}

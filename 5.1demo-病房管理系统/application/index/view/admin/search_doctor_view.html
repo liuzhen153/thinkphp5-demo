@@ -1,0 +1,24 @@
+{include file="common/header" title="$title" /}
+<table class="table table-bordered">
+    <tr class="info">
+      <td>工号</td>
+      <td>姓名</td>
+      <td>性别</td>
+      <td>职称</td>
+      <td>所属科室</td>
+      <td>工作状态</td>
+      <td>主治病人</td>
+    </tr>
+    {volist name="doctor" id="vo"}
+    <tr>
+      <td>{$vo.Dno}</td>
+      <td>{$vo.Dname}</td>
+      <td>{$vo.Dsex}</td>
+      <td>{$vo.Dzc}</td>
+      <td>{$vo.lz_Aname}</td>
+      <td>{$vo.Dstate}</td>
+      <td>{$vo.Pname}</td>
+    </tr>
+    {/volist}
+  </table>
+{include file="common/footer" /}

@@ -1,0 +1,16 @@
+{include file="common/header" title="$title" /}
+
+          <form role="form" action="{:url('charge_pwd_check')}" method="post">
+            <div class="form-group">
+              <label for="zh">原密码：</label>
+              <input type="hidden" name="uname" class="form-control" value="{$Think.session.Uname}">
+              <input type="text" name="old_password" class="form-control" id="zh" placeholder="原密码">
+            </div>
+            <div class="form-group">
+              <label for="mm">新密码</label>
+              <input type="password" name="new_password" class="form-control" id="mm" placeholder="新密码">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">确认修改</button>
+          </form>
+
+  {include file="common/footer" /}

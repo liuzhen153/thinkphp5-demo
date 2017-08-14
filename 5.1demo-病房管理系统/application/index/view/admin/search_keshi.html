@@ -1,0 +1,14 @@
+{include file="common/header" title="$title" /}
+      <form role="form" action="{:url('search_keshi_view')}" method="post">  
+          <div class="form-group">
+            <label for="mm">科室名称：</label>
+            <select class="form-control" name="aname">
+              {volist name="ato" id="vo"}
+                <option value='{$vo.Aname}'>{$vo.Aname}</option>
+              {/volist}>
+              </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">提交</button>
+        </form>
+  {include file="common/footer" /}

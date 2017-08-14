@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tp5-demo wangEditor的集成</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+    body{
+      background: #f8f8f8;
+    }
+    .header{
+      background: #fff;
+      padding:15px;
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom: 1px solid #e6e6e6;
+      margin-bottom: 50px;
+    }
+    footer{
+       background: #fff;
+       padding:30px 0;
+       text-align: center;
+       position: fixed;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 header">
+        wangEditor的集成
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="height:50px;"></div>
+    </div>
+      <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div id="editor">
+            <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+        </div>
+        <button id="html" class="btn btn-primary">获取HTML</button>
+        <button id="text" class="btn btn-info">获取TEXT</button>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div style="height: 100px;"></div>
+  <footer style="bottom: 0;width: 100%;">
+      &copy;2017 Tommy
+  </footer>
+  <script type="text/javascript" src="/static/wangEditor/wangEditor.min.js"></script>
+  <script type="text/javascript">
+      var E = window.wangEditor;
+      var editor = new E('#editor');
+      // 或者 var editor = new E( document.getElementById('#editor') );
+      editor.create();
+      document.getElementById('html').addEventListener('click', function () {
+        // 读取 html
+        alert(editor.txt.html());
+       }, false);
+
+      document.getElementById('text').addEventListener('click', function () {
+        // 读取 text
+        alert(editor.txt.text());
+      }, false);
+  </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>PHPExcel表格导出</title>
+    <link href="/static/admin/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+      <table class="table table-bordered" width="60%">
+          <thead>
+              <tr>
+                <th width="30">ID</th>
+                <th width="50">姓名</th>
+                <th width="30">年龄</th>
+                <th width="30">班级</th>
+                <th width="30">电话</th>
+                <th width="30">邮箱</th>
+             </tr>
+          </thead>
+        <tbody>
+            {volist name="list" id="v"}
+              <tr>
+                <td>{$v['id']}</td>
+                <td>{$v['name']}</td>
+                <td>{$v['age']}</td>
+                <td>{$v['class']}</td>
+                <td>{$v['tel']}</td>
+                <td>{$v['email']}</td>
+              </tr>
+            {/volist}
+        </tbody>
+      </table>
+      <button type="button" onclick="window.open('{:url('export')}')">导出Excel</button>
+  </div>
+  </body>
+  <script src="/static/admin/js/jquery.js"></script>
+  <script src="/static/admin/js/bootstrap.js"></script>
+</html>

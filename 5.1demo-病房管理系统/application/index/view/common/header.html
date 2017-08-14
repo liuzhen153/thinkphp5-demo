@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[title]</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="/static/hui.css">
+    <style type="text/css">
+      [v-cloak]{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 header">
+          工号{$Think.session.Uname}，您现在的位置是：{$title} <span class="pull-right hui-font-color-alizarin hui-margin-left-15" onclick="location.href='{:url('admin/login_out')}'" style="cursor:pointer;"> 注销登录 </span> <span class="pull-right" onclick="location.href='{:url('index')}'" style="cursor:pointer;"> 返回首页 </span>
+        </div>
+      </div>
+        <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 hui-margin-top-30 hui-padding-all-20 hui-background-color-white">

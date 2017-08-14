@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tp5-demo 注册</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+    body{
+      background: #f8f8f8;
+    }
+    .header{
+      background: #fff;
+      padding:15px;
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom: 1px solid #e6e6e6;
+      margin-bottom: 50px;
+    }
+    footer{
+       background: #fff;
+       padding:30px 0;
+       text-align: center;
+       position: fixed;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 header">
+        注册
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="height:50px;"></div>
+    </div>
+      <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 hui-margin-top-30 hui-padding-all-20 hui-background-color-white">
+        <form role="form" action="{:url('signup_check')}" method="post">
+          <div class="form-group">
+            <label>用户名：</label>
+            <input type="text" name="username" class="form-control"  placeholder="用户名">
+          </div>
+          <div class="form-group">
+            <label>密码：</label>
+            <input type="password" name="password" class="form-control" placeholder="密码">
+          </div>
+          <div class="form-group">
+            <label>确认密码：</label>
+            <input type="password" name="password1" class="form-control" placeholder="再输入一遍密码">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">提交</button>
+        </form>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <div style="height: 100px;"></div>
+  <footer style="bottom: 0;width: 100%;">
+      &copy;2017 Tommy
+  </footer>
+  </body>
+</html>

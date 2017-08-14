@@ -1,0 +1,62 @@
+{include file="common/header" title="$title" /}
+<form role="form" action="{:url('add_patient_check')}" method="post">
+          <div class="form-group">
+            <label for="zh">住院号：</label>
+            <input type="text" name="pno" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="zh">姓名：</label>
+            <input type="text" name="name" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="mm">性别：</label>
+            <label class="radio-inline">
+              <input type="radio" name="sex" value="男" checked> 男
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="sex" value="女"> 女
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="zh">出生日期：</label>
+            <input type="text" name="birthday" class="form-control" placeholder="格式：1993-10-22">
+          </div>
+          <div class="form-group">
+            <label for="zh">家庭住址：</label>
+            <input type="text" name="address" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="zh">联系电话：</label>
+            <input type="text" name="tel" class="form-control" placeholder="">
+          </div>
+         <div class="form-group">
+            <label for="mm">主治医生：</label>
+            <select class="form-control" name="dno">
+              {volist name="doctor" id="vo"}
+                <option value='{$vo.Dno}'>{$vo.Dname}.{$vo.lz_Aname}</option>
+              {/volist}
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="mm">病床号：</label>
+            <select class="form-control" name="cno">
+              {volist name="bed" id="vo"}
+                <option value='{$vo.Cno}'>{$vo.Cno}.{$vo.bc_Aname}</option>
+              {/volist}
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="zh">入院日期：</label>
+            <input type="text" name="idate" class="form-control" placeholder="格式：1993-10-22">
+          </div>
+          <div class="form-group">
+            <label for="zh">治疗备注：</label>
+            <input type="text" name="mark" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="zh">出院日期：</label>
+            <input type="text" name="odate" class="form-control" placeholder="格式：1993-10-22">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">提交</button>
+        </form>
+  {include file="common/footer" /}
